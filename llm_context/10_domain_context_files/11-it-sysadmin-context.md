@@ -21,7 +21,7 @@
 | **Domain** | Windows Active Directory forest | On-premises domain controllers |
 | **Azure Access** | Limited/None | No full Azure environment access |
 | **Server Infrastructure** | Windows Server 2019/2022 | Self-hosted services within AD environment |
-| **User Base** | UNKNOWN | Public sector enterprise constraints |
+| **User Base** | 80 Users + 2 IT staff | Public sector enterprise constraints |
 
 ---
 

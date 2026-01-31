@@ -66,17 +66,19 @@ You have an evolving number of **context markdown files** optimized for cloud-ho
 
 ### Core Context Files (Domain-Specific)
 
-1. **10-cs-engineering-competency.md** - Programming skills, language proficiency, learning gaps, project history
-2. **11-it-sysadmin-context.md** - IT role, Git repository work, PowerShell automation, enterprise practices
-3. **12-audio-studio-context.md** - Complete studio inventory, QU-5D routing template, DAW workflows
-4. **13-home-network-context.md** - YelNet topology, UniFi migration, homelab goals, security cameras
-5. **14-active-projects-context.md** - Current projects across work, creative, and learning domains
+1. **10-cs-engineering-competency.md** (~1,700 tokens) - Programming skills, language proficiency, learning gaps, project history
+2. **11-it-sysadmin-context.md** (~2,200 tokens) - IT role, Git repository work, PowerShell automation, enterprise practices
+3. **12-audio-studio-context.md** (~2,700 tokens) - Complete studio inventory, QU-5D routing template, DAW workflows
+4. **13-home-network-context.md** (~3,100 tokens) - YelNet topology, UniFi migration, homelab goals, security cameras
+5. **14-active-projects-context.md** (~4,100 tokens) - Current projects across work, creative, and learning domains
 
 ### Supporting Files
 
-6. **20-miscellaneous-context.md** - Catch-all for preferences, tools, habits, anti-patterns
-7. **02-llm-instructions.md** - Behavioral guidelines for how LLMs should interact with you
-8. **01-quick-reference.md** - ~300-word snapshot for instant context in new conversations
+6. **20-miscellaneous-context.md** (~3,100 tokens) - Catch-all for preferences, tools, habits, anti-patterns
+7. **02-llm-instructions.md** (~2,500 tokens) - Behavioral guidelines for how LLMs should interact with you
+8. **01-quick-reference.md** (~950 tokens) - ~300-word snapshot for instant context in new conversations
+
+**Total system size:** ~20,350 tokens (well within most LLM context windows)
 
 ### For Self-Hosted LLMs & MCPs (Model Context Protocol)
 

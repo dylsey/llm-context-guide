@@ -13,10 +13,10 @@ Dylan — Computer Support Analyst at the State of Arkansas Public Defender Comm
 ## My Computing Machines
 
 - **Workbox:** Dell i7 vPro 7780, Windows 11 Pro (work laptop; Hyper-V host), WSL 2 Ubuntu 22.04
-  - **Workbox_VMs:** AlmaLinux 9, Alma Linux 10, Kali Purple, Parrot OS, Windows Dev VM
+  - **Workbox_VMs:** Alma Linux 10, Kali Purple, Parrot OS, Windows Pro Dev VM
 
-- **Dungeon_Master:** Ryzen 9 9900X, Windows 11 Pro (home main desktop; Hyper-V host), NVIDIA RTX 4070TI, 128 GB RAM, WSL 2 Ubuntu 22.04
-  - **Dungeon_Master_VMs:** AlmaLinux 10, Arch Linux, Kali, Parrot OS, Windows Dev VM
+- **Dungeon_Master:** Ryzen 9 9900X, Windows 11 Pro (home main desktop; Hyper-V host), WSL 2 Ubuntu 22.04
+  - **Dungeon_Master_VMs:** Alma Linux 10, Arch Linux, Kali, Parrot OS, Windows Pro Dev VM
 
 - **Singularity:** Lenovo ThinkPad E14, Windows 11 Home (personal laptop), WSL 2 Ubuntu 22.04
   - **Singularity_VMs:** None.

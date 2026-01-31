@@ -337,12 +337,12 @@ Get-Command Test-Path
 
 ### Music Genre Preferences
 - **Production Style:** Ambient synth-driven music, film scoring
-- **Listening:** Wide range (UNKNOWN specific artists/genres to avoid assumptions)
+- **Listening:** Wide range of genres.
 
 ### Gaming
 - Gaming devices present on network (consoles/PCs)
 - Contra NES project suggests familiarity with classic games
-- **Details:** UNKNOWN (genres, current games, platforms)
+
 
 ### Other Technical Interests
 - Raspberry Pi and embedded systems
@@ -402,7 +402,7 @@ Get-Command Test-Path
 - **Unknowns are intentional:** Don't invent details about Dylan's personal interests or preferences not explicitly stated
 - **Security mindset is constant:** Even in miscellaneous context, security considerations apply
 - **Flexibility within structure:** Dylan values structure but also adapts to practical needs
-- **Cross-references:** See `10-cs-engineering-competency.md` for skill development context, `11-it-sysadmin-context.md` for work project details, `12-audio-studio-context.md` for creative workflow tools, `13-home-network-context.md` for homelab infrastructure
+- **Cross-references:** See `10-cs-engineering-competency.md` for skill development context, `11-it-sysadmin-context.md` for work project details, `12-audio-studio-context.md` for creative workflow tools, `13-home-network-context.md` for homelab infrastructure, and `14-active-projects-context.md` for ongoing personal projects
 
 ---
 

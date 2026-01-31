@@ -227,6 +227,7 @@ graph TD
 | VM Name | OS | Purpose |
 |---------|-----|---------|
 | AlmaLinux 10 | AlmaLinux 10 (RHEL-Based) | Linux server/development environment |
+| Arch Linux VM | Arch Linux | Advanced Linux learning |
 | Windows Test VM | Windows | Testing, sandbox |
 | Kali Linux VM | Kali Linux | Penetration testing and offensive security |
 | Parrot OS VM | Parrot Security | Security testing, OSINT |
@@ -398,8 +399,7 @@ The following network details are **undocumented & not implemented:**
 - **Learning environment:** Homelab is for education, not just production functionality
 - **UniFi bias:** Dylan is operating a UniFi ecosystem, prefer UniFi-specific guidance when relevant
 - **Ask about unknowns:** Many network details (VLANs, IPs, firewall rules) are not yet defined—ask rather than assume
-- **Cross-references:** See `14-active-projects-context.md` for Louis art installation (Gar Studios) full project details, `11-it-sysadmin-context.md` for DNS deep dive and PowerShell automation, `12-audio-studio-context.md` for synthesis and TouchDesigner requirements
-
+- **Cross-references:** See `10-cs-engineering-competency.md` for data collection and audio synthesis learning goals, `11-it-sysadmin-context.md` for DNS deep dive and PowerShell automation, `12-audio-studio-context.md` for synthesis and TouchDesigner requirements, `14-active-projects-context.md` for Louis art installation (Gar Studios) full project details
 ---
 
 ## Change Log
