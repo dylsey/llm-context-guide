@@ -1,6 +1,6 @@
 # Dylan — IT & Systems Administration Context
 
-**Last Updated:** 2026-01-27 10:30 UTC  
+**Last Updated:** 2026-01-31 18:32 UTC
 **Purpose:** Professional IT role, operational practices, and infrastructure responsibilities
 
 ---
@@ -164,7 +164,7 @@ Supervisor recommends starting with simple file share permissions testing before
 
 ### Development Folder Structure (Cross-Platform Standard)
 
-**Linux:** `~/dev`  
+**Linux:** `~/dev`
 **Windows:** `C:\Dev`
 
 **Directory Layout:**
@@ -283,4 +283,15 @@ Dylan values:
 - **Enterprise mindset** even for small team: build for scale
 - **Official documentation** preferred over community shortcuts
 - **Verify assumptions** about environment (AD integration, permissions, compliance)
-- **Cross-references:** See CS context doc for technical skill levels, Network context doc for homelab infrastructure and cybersecurity learning goals
+- **Cross-references:** See `10-cs-engineering-competency.md` for technical skill levels, `13-home-network-context.md` for homelab infrastructure and cybersecurity learning goals
+
+---
+
+## Change Log
+
+**Format:** `YYYY-MM-DD HH:MM UTC - Description of changes`
+
+- 2026-01-31 18:32 UTC - Standardized date formats, cross-references, and status tags; added Status Tag Reference
+- *(Future changes will be logged here)*
+
+---

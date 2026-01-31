@@ -1,13 +1,13 @@
 # Dylan — Active Projects Context
 
-**Last Updated:** 2026-01-28 01:28 UTC
+**Last Updated:** 2026-01-31 18:32 UTC
 **Purpose:** Current projects, initiatives, and work-in-progress across IT, software development, creative, and homelab domains
 
 ---
 
 ## 1) Work IT Projects (State of Arkansas Public Defender Commission)
 
-### Git Repository Implementation (Top Work Priority)
+### Git Repository Implementation `[ACTIVE]`
 
 **Objective:** Establish self-hosted Git repository infrastructure for internal code and documentation
 
@@ -49,10 +49,9 @@
 
 ## 2) Creative Projects
 
+### Louis Art Installation: Social Communication, Dissonance, and Human Connection `[RESEARCH]`
 
-### Louis Art Installation: Social Communication, Dissonance, and Human Connection `[PLANNING/BRAINSTORMING/RESEARCHING]`
-
-**Collaborator:** Louis (art and sound projects partner)
+**Collaborator:** Louis (art and sound projects partner in Gar Studios)
 
 **Conceptual Themes:**
 - **Data privacy and surveillance capitalism** - Making invisible data collection visible
@@ -139,6 +138,52 @@
 4. **TouchDesigner proficiency:** Audio-reactive visuals, real-time performance
 5. **System integration:** Connecting network data → audio → video in stable, reproducible pipeline
 
+
+### Technical Requirements `[RESEARCH]`
+
+**Core Functionality:**
+1. **Captive Portal WiFi VLAN**
+   - Users connect to dedicated VLAN WiFi SSID
+   - Captive portal landing page explaining data collection
+   - End User License Agreement (EULA) for data collection consent
+   - Legal compliance framework for data collection
+
+2. **Data Collection Architecture**
+   - WiFi/network metadata (signal strength, connection patterns)
+   - Browser fingerprinting (if legally permissible with consent)
+   - Social media integration (Instagram API, within ToS limits)
+   - Simulate data broker collection methods
+   - Pull legal data from any scrapable sources on people's devices that opt-in to the experience over WiFi
+
+3. **Data Visualization Dashboard**
+   - Real-time display of collected data
+   - Demonstrate what "surveillance capitalism" captures
+   - Local display for participants to see their data
+
+4. **Interactive Audio Component**
+   - WiFi/cellular signal → audio parameter mapping
+   - Presence detection triggering sound
+   - Synthesizer engine controlled by user data
+   - Spatial interaction based on device signals
+
+### Technical Stack Considerations
+- **Platform:** TBD (evaluating Linux/Windows options)
+- **Captive Portal Software:** TBD
+- **Data Processing:** TBD
+- **Audio Engine:** TBD (evaluating JUCE, Max/MSP, Pure Data)
+- **Visualization:** TBD (considering React/D3.js, TouchDesigner)
+
+### Open Questions
+- Legal framework for consent-based data collection in art context
+- How to clearly communicate "you are being surveilled" to participants
+- Technical feasibility of social media integration within platform ToS
+- Infrastructure requirements (dedicated router, VLAN setup, hardware)
+- Audio synthesis mapping strategies based on collected data
+- User experience flow from connection to data visualization and audio interaction
+- How to begin architecting the captive portal and data collection backend
+- How to anonymize data while still demonstrating surveillance concepts
+- Want to avoid PII collection entirely, focus on metadata and behavioral patterns like marketing and ad tech companies do
+
 **Current Phase:** Conceptual design, technical research, skill-building (synthesizer programming, TouchDesigner learning)
 
 **Immediate Next Steps:**
@@ -149,7 +194,7 @@
 5. TouchDesigner tutorials: Audio-reactive visual prototypes
 6. Hardware requirements specification: PC build or deployable system comparison
 
-### Ambient Synth Album (Lowest Priority - Active Production) `[Active Production]`
+### Ambient Synth Album (Lowest Priority - Active Production) `[ACTIVE]`
 
 **Project Type:** Original music production and release
 
@@ -206,7 +251,7 @@
 
 ---
 
-### Doomscroller (Film Audio Post Pipeline) `[COMPLETE - Learning Platform]`
+### Doomscroller (Film Audio Post Pipeline) `[COMPLETE]`
 
 **Project Type:** Film audio post-production workflow and deliverable management
 
@@ -268,7 +313,7 @@
 
 ## 3) Learning & Personal Development Projects
 
-### Homelab Cybersecurity Learning Environment
+### Homelab Cybersecurity Learning Environment `[ACTIVE]`
 
 **Goal:** Build hands-on cybersecurity lab for structured learning and certification preparation
 
@@ -319,7 +364,7 @@
 
 ---
 
-### MIDI Parameter Mapping Automation Tool (Long-Term)
+### MIDI Parameter Mapping Automation Tool `[PLANNED]`
 
 **Problem Statement:**
 Manual MIDI CC mapping between controllers and instruments/VSTs is time-consuming and error-prone
@@ -352,7 +397,7 @@ Tool that reads MIDI parameters from hardware controllers and software instrumen
 
 ## 4) Past Projects (Context for Learning Style & Competency)
 
-### Contra NES SDL2 Game (Completed Coursework Project)
+### Contra NES SDL2 Game (Programming 2- Coursework Project) `[COMPLETE]`
 
 **Significance:** Major learning project demonstrating CS fundamentals and architectural thinking
 
@@ -392,7 +437,7 @@ Tool that reads MIDI parameters from hardware controllers and software instrumen
 - Windows: `C:\Dev`
 
 **Organization:**
-- Suggested Structure `[NOT Finalized]`:
+- Suggested Structure `[BRAINSTORMING]`:
 
 ```
 dev/
@@ -420,8 +465,8 @@ dev/
 ### High Priority (Active Work)
 | Project | Domain | Status | Urgency |
 |---------|--------|--------|---------|
-| Git Repository Implementation | Work IT | Research/PoC | High |
-| Louis Gar Studios Art Installation | Creative | Planning/Learning | High |
+| Git Repository Implementation | Work IT | `[RESEARCH]` | High |
+| Louis Gar Studios Art Installation | Creative | `[RESEARCH]` | High |
 
 
 ### Medium Priority (Ongoing/Iterative)
@@ -485,3 +530,14 @@ dev/
 - **Learning is integrated:** Homelab projects inform work skills and vice versa
 - **Creative projects provide balance:** Music/audio work is important for well-being
 - **Security-first mindset applies to all projects:** Never compromise security for convenience
+- **Cross-references:** See `10-cs-engineering-competency.md` for skill development context, `11-it-sysadmin-context.md` for work project details, `12-audio-studio-context.md` for creative workflow tools, `13-home-network-context.md` for homelab infrastructure
+---
+
+## Change Log
+
+**Format:** `YYYY-MM-DD HH:MM UTC - Description of changes`
+
+- 2026-01-31 18:32 UTC - Standardized date formats, cross-references, and status tags; added Status Tag Reference
+- *(Future changes will be logged here)*
+
+---

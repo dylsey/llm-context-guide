@@ -1,6 +1,6 @@
 # Dylan — Quick Reference
 
-**Last Updated:** 2026-01-27 20:56 UTC
+**Last Updated:** 2026-01-31 18:32 UTC
 **Purpose:** Instant context for new LLM conversations
 
 ---
@@ -10,29 +10,56 @@ Dylan — Computer Support Analyst at the State of Arkansas Public Defender Comm
 
 ---
 
-## My Machines (Physical)
+## My Computing Machines
+
 - **Workbox:** Dell i7 vPro 7780, Windows 11 Pro (work laptop; Hyper-V host), WSL 2 Ubuntu 22.04
-  - **VMs:** AlmaLinux 9, Alma Linux 10, Kali Purple, Parrot OS, Windows Dev VM
-- **Dungeon_Master:** Ryzen 9 9900X, Windows 11 Pro (home desktop; Hyper-V host), WSL 2 Ubuntu 22.04
-  - **VMs:** AlmaLinux 10, Arch Linux, Kali, Parrot OS, Windows Dev VM
+  - **Workbox_VMs:** AlmaLinux 9, Alma Linux 10, Kali Purple, Parrot OS, Windows Dev VM
+
+- **Dungeon_Master:** Ryzen 9 9900X, Windows 11 Pro (home main desktop; Hyper-V host), NVIDIA RTX 4070TI, 128 GB RAM, WSL 2 Ubuntu 22.04
+  - **Dungeon_Master_VMs:** AlmaLinux 10, Arch Linux, Kali, Parrot OS, Windows Dev VM
+
 - **Singularity:** Lenovo ThinkPad E14, Windows 11 Home (personal laptop), WSL 2 Ubuntu 22.04
-  - **VMs:** None.
+  - **Singularity_VMs:** None.
+
 - **Surface Book Gen 1:** AlmaLinux 9.6 bare metal (Linux learning platform)
+
 - **uConsole (ClockworkPi):** Raspberry Pi CM4, Rex's Debian Bookworm for uConsole + Parrot Security OS + RetroPie (portable Linux handheld to learn safe and ethical hacking in my labs and retro gaming)
 
 ---
 
+## Status Tag Reference
+
+All context files use standardized status tags for consistency:
+
+| Tag | Meaning | Use Case |
+|-----|---------|----------|
+`[BRAINSTORMING]` - Conceptual only
+`[PLANNED]` - Scheduled/approved future work
+`[RESEARCH]` - Investigating/proof-of-concept
+`[ACTIVE]` - Currently working on this
+`[REFINEMENT]` - Improving/expanding
+`[ON_HOLD]` - Paused, may resume
+`[COMPLETE]` - Finished, may need maintenance
+`[DEPLOYED]` - In production use
+`[AVAILABLE]` - Ready for use but not deployed
+`[DEPRECATED]` - No longer relevant
+`[RETIRED]` - Replaced by newer solution
+
 ## Active Projects (Priority Order)
-1. **Git repository implementation** (work)
+
+1. **Git repository implementation** (work) `[ACTIVE]`
    - **Goal:** Self-hosted/ Local-hosted Git on Windows Server 2022 with AD integration + sane repo/workflow standards
    - **Next:** Finalize repo layout + permissions model; publish CONTRIBUTING.md and README.md; validate clone/push workflows from client PCs
-2. **Louis-collab Gar Studios Art installation** (creative)
+
+2. **Louis-collab Gar Studios Art installation** (creative) `[BRAINSTORMING]`
    - **Goal:** Social communication/dissonance + distance/closeness exploration using **consent-based** data collection in an **isolated lab VLAN**, audio synthesis, and TouchDesigner audio-reactive visuals
    - **Next:** Document consent/scope constraints; gather resources and learn how to:  git-repos that can supply stubs for working software prototypes for data gathering. same for: prototype data→audio mapping; prototype TouchDesigner reactive pipeline; package a portable install system
-3. **Homelab cybersecurity learning** (personal)
+
+3. **Homelab cybersecurity learning** (personal) `[ACTIVE]`
    - **Goal:** VLANs/subnets/CIDR fundamentals + UniFi segmentation + secure services/VPN posture
-   - **Next:** Maintain a VLAN/IP plan as source-of-truth; validate inter-VLAN rules; harden management plane; document change control; work through Hands on Hacking if necssary along with Tryhackme labs.
-3. **LLM Context and Prompt Engineering Guide** (personal)
+  - **Next:** Maintain VLAN/IP plan as source-of-truth; validate inter-VLAN rules; harden management plane; document change control; work through TryHackMe labs as necessary
+
+3. **LLM Context and Prompt Engineering Guide** (personal) `[ACTIVE]`
    - **Goal:** Modular, reusable LLM context files for different domains of my life; prompt engineering best practices guide
    - **Next:** Expand modular context files; create prompt engineering guide structure; test with various LLMs
 
@@ -68,7 +95,7 @@ Never suggest solutions that increase attack surface. Prefer official hardening 
 ---
 
 ## Music Production Role (Context)
-Producer/composer (ambient synth), engineer, sound designer, film audio post.
+Producer/composer (ambient synth/dub techno), engineer, sound designer, film audio post.
 Primary DAWs: **Ableton Live 12** + **Pro Tools 2025.12**.
 Primary interface/routing: **Allen & Heath QU-5D** (multi-DAW + Discord streaming routing; not using Voicemeeter).
 
@@ -89,3 +116,14 @@ Primary interface/routing: **Allen & Heath QU-5D** (multi-DAW + Discord streamin
 
 **For deeper context, load relevant modular files:**
 10-cs-engineering-competency.md | 11-it-sysadmin-context.md | 12-audio-studio-context.md | 13-home-network-context.md | 14-active-projects-context.md | 20-miscellaneous-context.md
+
+---
+
+## Change Log
+
+**Format:** `YYYY-MM-DD HH:MM UTC - Description of changes`
+
+- 2026-01-31 18:32 UTC - Standardized date formats, cross-references, and status tags; added Status Tag Reference
+- *(Future changes will be logged here)*
+
+---

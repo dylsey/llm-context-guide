@@ -1,5 +1,7 @@
 # How to Use the Modular LLM Context System
 
+Last Updated: 2026-01-31 18:32 UTC
+
 **Purpose:** This guide explains how to use personalized markdown context files with any LLM (Claude, ChatGPT, or self-hosted models).
 
 **Audience:** Beginners learning prompt engineering and context management, as well as experienced users who want a structured system.
@@ -13,6 +15,7 @@
   - [Core Context Files (Domain-Specific)](#core-context-files-domain-specific)
   - [Supporting Files](#supporting-files)
   - [For Self-Hosted LLMs & MCPs](#for-self-hosted-llms--mcps-model-context-protocol)
+  - [Status Tag Reference](#status-tag-reference)
 - [For New Users: Identifying Your Context Domains (Q&A Format)](#for-new-users-identifying-your-context-domains-qa-format)
 - [How to Use This System](#how-to-use-this-system)
   - [Starting a New LLM Conversation](#starting-a-new-llm-conversation)
@@ -59,7 +62,7 @@
 
 ## File Inventory
 
-You have **8 markdown files** optimized for cloud-hosted LLM memory management:
+You have an evolving number of **context markdown files** optimized for cloud-hosted LLM memory management:
 
 ### Core Context Files (Domain-Specific)
 
@@ -103,6 +106,32 @@ You have **8 markdown files** optimized for cloud-hosted LLM memory management:
     }
   }
 }
+```
+
+---
+
+## Status Tag Reference
+
+All context files use standardized status tags for consistency:
+
+| Tag | Meaning | Use Case |
+|-----|---------|----------|
+| `[PLANNED]` | Scheduled/approved future work | Budgeted projects, scheduled upgrades |
+| `[BRAINSTORMING]` | Conceptual only | Early ideation, no concrete plans |
+| `[RESEARCH]` | Investigating/proof-of-concept | Learning phase, evaluating options |
+| `[ACTIVE]` | Currently working on this | Projects in progress, equipment in use |
+| `[ON_HOLD]` | Paused, may resume | Waiting on dependencies, budget |
+| `[REFINEMENT]` | Improving/expanding | Improvements & changes to existing items |
+| `[COMPLETE]` | Finished, may need maintenance | Deployed systems, finished projects |
+| `[DEPRECATED]` | No longer relevant | Retired equipment, abandoned projects |
+| `[DEPLOYED]` | In production use | Live systems, actively used resources |
+| `[AVAILABLE]` | Ready for use but not deployed | Spare equipment, unused resources |
+| `[RETIRED]` | Replaced by newer solution | Legacy systems kept for reference or repurpose |
+
+**Usage example:**
+```markdown
+| **Allen & Heath QU-5D** | `[DEPLOYED]` | 48 kHz | Main digital mixer |
+| **Zoom LiveTrak L-12** | `[AVAILABLE]` | 48 kHz | Replaced by QU-5D |
 ```
 
 ---
@@ -817,7 +846,7 @@ If 12-audio-studio-context.md exceeds 2,000 words, split into:
 
 ```bash
 # 1. Copy template
-cd C:\Dev\docs\llm-context
+cd C:\path\to\your-context-file.md
 cp templates/new-domain-template.md 15-photography-context.md
 
 # 2. Open in VS Code
@@ -920,26 +949,26 @@ cp templates/new-domain-template.md 12c-audio-projects-context.md
 ## Next Steps
 
 ### For New Users:
-1. ✅ **Read this README** (you are here)
-2. ✅ **Identify your domains** (use Q&A section above)
-3. ✅ **Create 01-quick-reference.md** (start with template)
-4. ✅ **Create 02-llm-instructions.md** (define your preferences)
-5. ✅ **Create 1-3 domain context files** (start small, expand later)
-6. ✅ **Test with ChatGPT/Claude:** Paste quick reference + one domain file
-7. ✅ **Iterate:** Update files based on what works/doesn't work
+1. **Read this README** (you are here)
+2. **Identify your domains** (use Q&A section above)
+3. **Create 01-quick-reference.md** (start with template)
+4. **Create 02-llm-instructions.md** (define your preferences)
+5. **Create 1-3 domain context files** (start small, expand later)
+6. **Test with ChatGPT/Claude:** Paste quick reference + one domain file
+7. **Iterate:** Update files based on what works/doesn't work
 
 ### For Returning Users:
-1. ✅ **Review files for accuracy** (monthly)
-2. ✅ **Update 14-active-projects-context.md** (as projects evolve)
-3. ✅ **Fill in UNKNOWN sections** (as you document things)
-4. ✅ **Commit changes to Git** (maintain version history)
-5. ✅ **Test updated files** (verify LLM has current info)
+1. **Review files for accuracy** (monthly)
+2. **Update 14-active-projects-context.md** (as projects evolve)
+3. **Fill in UNKNOWN sections** (as you document things)
+4. **Commit changes to Git** (maintain version history)
+5. **Test updated files** (verify LLM has current info)
 
 ### One-Time Setup Tasks:
 ```bash
 # 1. Create directory
-mkdir -p C:\Dev\docs\llm-context
-cd C:\Dev\docs\llm-context
+mkdir -p C:\path\to\your-context-file-directory
+cd C:\path\to\your-context-file-directory
 
 # 2. Initialize Git repository
 git init
@@ -978,10 +1007,10 @@ This modular system gives you **precise control** over what context each LLM has
 └─────────────────────────────────────────────────┘
 
 MONTHLY MAINTENANCE:
-☐ Update 14-active-projects-context.md
-☐ Review learning goals (10-competency files)
-☐ Fill in UNKNOWN sections
-☐ Git commit + push
+- Update 14-active-projects-context.md
+- Review learning goals (10-competency files)
+- Fill in UNKNOWN sections
+- Git commit + push
 
 TROUBLESHOOTING:
 → LLM not following instructions?
@@ -1005,3 +1034,14 @@ find . -mtime -30       # Files modified recently
 **Questions? Contributions?**
 
 This system is designed to evolve. If you discover better practices or have suggestions, document them in your own `README-improvements.md` and share with the community!
+
+---
+
+## Change Log
+
+**Format:** `YYYY-MM-DD HH:MM UTC - Description of changes`
+
+- 2026-01-31 18:32 UTC - Standardized date formats, cross-references, and status tags; added Status Tag Reference
+- *(Future changes will be logged here)*
+
+---

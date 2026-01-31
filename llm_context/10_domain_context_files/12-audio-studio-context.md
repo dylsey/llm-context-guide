@@ -1,7 +1,7 @@
 # Dylan — Audio Studio & Music Production Context
 
-**Last Updated:** 2026-01-27 10:49 UTC
-**Purpose:** Complete studio inventory, routing templates, DAW workflows, and creative practices
+**Last Updated:** 2026-01-31 18:32 UTC
+**Purpose:** Complete studio inventory, routing templates, DAW workflows, Projects, and creative practices
 
 ---
 
@@ -10,10 +10,10 @@
 ### Professional Capabilities
 | Role | Description | Tools Used |
 |------|-------------|------------|
-| Producer/Composer | Ambient synth-driven music, film scoring | Pro Tools 2025.12, Ableton Live 12, hardware synths |
-| Audio Engineer | Recording, editing, mixing, mastering | Pro Tools 2025.12, Ableton Live 12 |
-| Sound Designer | Film audio post, foley, sound effects | DaVinci Resolve, Pro Tools 2025.12, Ableton Live 12 |
-| Film Audio Post | Deliverables, stems, AAF/OMF collaboration | Cross-DAW and Cross-OS workflows |
+| **Producer/Composer** | Ambient synth-driven music, film scoring | Pro Tools 2025.12, Ableton Live 12, hardware synths |
+| **Audio Engineer** | Recording, editing, mixing, mastering | Pro Tools 2025.12, Ableton Live 12 |
+| **Sound Designer** | Film audio post, foley, sound effects | DaVinci Resolve, Pro Tools 2025.12, Ableton Live 12 |
+| **Film Audio Post** | Deliverables, stems, AAF/OMF collaboration | Cross-DAW and Cross-OS workflows |
 
 ### Collaboration Workflows
 - **Logic Pro users:** Import MIDI/stems → finish in Ableton/Pro Tools
@@ -34,16 +34,16 @@
 ### Software Instruments & Plugins
 | Plugin | Category | Usage |
 |--------|----------|-------|
-| Omnisphere 3 | Software synthesizer | Pads, textures, complex sounds |
-| Pigments 6 | Hybrid synthesizer | Pads, textures, modulation |
-| Arturia V Collection 11 | Vintage synth emulations | Classic sounds, specific character |
-| u-He Zebra 3 | Modular synthesizer (still in Beta) | Sound design, evolving textures |
-| Native Instruments Absynth 6 | Semi-modular synth | Ambient sounds, evolving pads |
-| Serum 2 | Wavetable synthesizer | Sound design, bass, leads |
-| iZotope RX11 Advanced | Audio repair & restoration | Dialogue cleanup, spectral editing, noise reduction |
-| iZotope Ozone 12 Advanced | Mastering suite | Loudness management, stereo imaging, mastering chain |
+| **Omnisphere 3** | Software synthesizer | Pads, textures, complex sounds |
+| **Pigments 6** | Hybrid synthesizer | Pads, textures, modulation |
+| **Arturia V Collection 11** | Vintage synth emulations | Classic sounds, specific character |
+| **u-He Zebra 3** | Modular synthesizer (still in Beta) | Sound design, evolving textures |
+| **Native Instruments Absynth 6** | Semi-modular synth | Ambient sounds, evolving pads |
+| **Serum 2** | Wavetable synthesizer | Sound design, bass, leads |
+| **iZotope RX11 Advanced** | Audio repair & restoration | Dialogue cleanup, spectral editing, noise reduction |
+| **iZotope Ozone 12 Advanced** | Mastering suite | Loudness management, stereo imaging, mastering chain |
 
-**Full plugin inventory:** For complete list — see `\llm_context\20_supporting_files\21-plugins.md`
+**Full plugin inventory:** For complete list — see: `C:\Dev\Markdown\Projects\LLM\llm_context\20_supporting_files\21-plugins.md`
 
 ### DAW-Specific Workflows
 
@@ -51,15 +51,24 @@
 - MIDI import consolidation to avoid unwanted clip multiplication
 - Avoiding automatic time warping on MIDI/audio imports
 - Session organization for stems and raw audio deliverables
+- Importing Stems & other formats for DAW and NLE audio & video workflows
 
 **Pro Tools 2025.12:**
 - Industry-standard deliverable formats
 - AAF/OMF session exchange
 - Collaboration with editors and other post facilities
+- Importing & Exporting AAF & other formats for DAW and NLE audio & video workflows
 
 **FFmpeg Workflows:**
 - Remuxing audio/video (preserving video quality while replacing audio)
 - Format conversion for cross-platform compatibility
+- CLI-based audio & video processing for complete control over deliverables
+
+**Davinci Resolve:**
+- Video editing with integrated audio post
+- Fine tuning audio and video sync within a video NLE environment
+- Exporting AAF & other formats for DAW and NLE audio & video workflows
+- Syncing audio from Pro Tools & Ableton sessions
 
 ---
 
@@ -68,7 +77,7 @@
 ### Current Primary Interface
 | Device | Status | Sample Rate | Notes |
 |--------|--------|-------------|-------|
-| **Allen & Heath QU-5D** | `[ACTIVE]` | 48 kHz | Main digital mixer & interface; USB audio + DAW control implemented and working, learning full functionality |
+| **Allen & Heath QU-5D** | `[ACTIVE]` | 96 kHz ( 48 kHz currently ) | Main digital mixer & interface; USB audio + DAW control implemented and working, learning full functionality |
 | **Zoom LiveTrak L-12** | `[RETIRED]` | 48 kHz | Cycled to live use, not used since QU-5D fully configured |
 
 ---
@@ -82,8 +91,8 @@
 ### Layer Configuration
 | Layer | Purpose | Channels |
 |-------|---------|----------|
-| **Layer A** | MIDI instruments | Channels 1–16 (MIDI) |
-| **Layer B** | MIDI instruments (extended) | Channels 17–32 (MIDI) |
+| **Layer A** | MIDI instruments/channels | Channels 1–16 (MIDI) |
+| **Layer B** | MIDI instruments/channels (extended) | Channels 17–32 (MIDI) |
 | **Layer C** | Mostly empty | Random local + USB inputs |
 | **Layer D** | Mix buses, FX, Stream | USB apps + key instruments: Ableton, Discord, Omnisphere, Pro Tools, Vocals, hardware & soft synths, Mix1/2, Mix3, Mix4, FX sends/returns, Stream (Mix12), Main LR |
 
@@ -189,7 +198,7 @@
 ### MIDI Utilities
 | Device | Function | Purpose |
 |--------|----------|---------|
-| **MOTU MIDI Express XT** | 8-in/8-out MIDI interface | Central MIDI routing hub, currently implemented in used for MIDI routing management) |
+| **MOTU MIDI Express XT** | 8-in/8-out MIDI interface | Central MIDI routing hub, currently implemented & MOTU Clockwork used for MIDI routing management) |
 | **MIDI Merge-4** | 4-to-1 MIDI merge | Combine multiple MIDI sources |
 | **MIDI Quadra Thru** | 1-to-4 MIDI thru | Distribute MIDI to multiple devices |
 | **MIDI Thru-12** | 1-to-12 MIDI thru | Large-scale MIDI distribution |
@@ -248,18 +257,6 @@
 
 ## 9) Active Music Projects
 
-### Doomscroller (Film Audio Post Pipeline) `[ACTIVE FOR TEST ENVIRONMENT]`
-**Focus Areas:**
-- Sound design editing and library management
-- Mixing and mastering for film deliverables
-- Stems and AAF collaboration with editors
-- FFmpeg remux workflows for audio replacement
-
-**Workflow Requirements:**
-- High-quality audio processing
-- Format flexibility for editor compatibility
-- Organized session structure for revisions
-
 ### Gar Studios (Music & Video Production) `[ACTIVE]`
 **Focus Areas:**
 - Louis Art Installation (Network Context Required)
@@ -276,9 +273,23 @@
 - High-quality mixing and mastering
 - Video/audio sync workflows
 
+### Completed Projects for Reference
+
+**Doomscroller (Film Audio Post)** `[COMPLETE]`
+**Focus Areas:**
+- Sound design editing and library management
+- Mixing and mastering for film deliverables
+- Stems and AAF collaboration with editors
+- FFmpeg remux workflows for audio replacement
+
+**Workflow Requirements:**
+- High-quality audio processing
+- Format flexibility for editor compatibility
+- Organized session structure for revisions
+
 ### Future Projects (Planned)
 
-- Sample Library Expansion & Management
+- Sample Library Management
 - Organization of Project Directory Structure in a Standardized Format
 
 ---
@@ -318,7 +329,7 @@ The following studio details are **not yet fully documented:**
 - [ ] Monitoring controller or volume management system (currently handled via QU-5D)
 
 ### Software & Plugin Ecosystem
-- [ ] Complete plugin inventory (ongoing in `\llm_context\20_supporting_files\21-plugins.md`)
+- [ ] Complete plugin inventory (ongoing in `C:\Dev\Markdown\Projects\LLM\llm_context\20_supporting_files\21-plugins.md`)
 - [ ] Plugin folder organization standards
 - [ ] Preset management workflow
 
@@ -334,4 +345,16 @@ The following studio details are **not yet fully documented:**
 - **Hardware-centric workflow:** Dylan uses extensive hardware synths, not just software
 - **Cross-DAW collaboration is common:** Provide format compatibility guidance when relevant
 - **Security of stability:** USB power settings and direct motherboard connections matter for reliability
-- **Cross-references:** See CS context doc for FFmpeg workflows and C++ audio DSP learning goals, Network context doc for Louis art installation project requirements
+- **Cross-references:** See `10-cs-engineering-competency.md` for FFmpeg workflows and C++ audio DSP learning goals, `14-active-projects-context.md` for Louis art installation (Gar Studios) project details
+
+---
+
+## Change Log
+
+**Format:** `YYYY-MM-DD HH:MM UTC - Description of changes`
+
+- 2026-01-31 18:32 UTC - Standardized date formats, cross-references, and status tags; added Status Tag Reference
+- *(Future changes will be logged here)*
+
+---
+

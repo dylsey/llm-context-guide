@@ -1,6 +1,6 @@
 # Dylan — Miscellaneous Context & Preferences
 
-**Last Updated:** 2026-01-27
+**Last Updated:** 2026-01-31 18:32 UTC
 **Purpose:** Catch-all for preferences, habits, tools, and contextual information that doesn't fit primary domain categories
 
 ---
@@ -402,3 +402,15 @@ Get-Command Test-Path
 - **Unknowns are intentional:** Don't invent details about Dylan's personal interests or preferences not explicitly stated
 - **Security mindset is constant:** Even in miscellaneous context, security considerations apply
 - **Flexibility within structure:** Dylan values structure but also adapts to practical needs
+- **Cross-references:** See `10-cs-engineering-competency.md` for skill development context, `11-it-sysadmin-context.md` for work project details, `12-audio-studio-context.md` for creative workflow tools, `13-home-network-context.md` for homelab infrastructure
+
+---
+
+## Change Log
+
+**Format:** `YYYY-MM-DD HH:MM UTC - Description of changes`
+
+- 2026-01-31 18:32 UTC - Standardized date formats, cross-references, and status tags; added Status Tag Reference
+- *(Future changes will be logged here)*
+
+---

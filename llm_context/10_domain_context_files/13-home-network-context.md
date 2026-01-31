@@ -1,6 +1,6 @@
 # Dylan — Home Network & Homelab Context (YelNet)
 
-**Last Updated:** 2026-01-28 01:28 UTC
+**Last Updated:** 2026-01-31 18:32 UTC
 **Purpose:** Network topology, hardware inventory, security architecture, and homelab learning goals
 
 ---
@@ -208,7 +208,7 @@ graph TD
 
 **Integration Status:**
 - Reolink app access: `[ACTIVE]`
-- UniFi Protect integration: `[NOT CONFIGURED]`
+- UniFi Protect integration: `[PLANNED]`
 
 ---
 
@@ -217,11 +217,11 @@ graph TD
 ### Homelab Hosts
 | Machine | OS | Role | Location |
 |---------|-----|------|----------|
-| **Dungeon_Master** | Windows 11 Pro | Hyper-V host, primary workstation | Home office |
+| **Dungeon_Master (Custom Build)** | Windows 11 Pro | Hyper-V host, primary workstation | Home office |
 | **Surface Book Gen 1** | AlmaLinux 9.6 (RHEL-Based) | Bare metal Linux learning | Mobile |
 | **Old Desktop PC** | `[PLANNED]` | Planned for lab use | Storage |
 | **ClockworkPi uConsole** | Debian-Based OS Fork & Parrot Security OS | Portable Linux experiments and pen testing | Mobile |
-| **Lenovo ThinkPad E14** | Windows 11 Home | General use, portable dev work | Mobile |
+| **Singularity (Lenovo ThinkPad E14)** | Windows 11 Home | General use, portable dev work | Mobile |
 
 #### Hyper-V Virtual Machines (Dungeon_Master)
 | VM Name | OS | Purpose |
@@ -340,57 +340,31 @@ graph TD
 
 ## 13) Louis Art Installation Project (Data Privacy Concept)
 
+**Note:** For complete project details, see `12-audio-studio-contex.md` `14-active-projects-context.md` Section 2.
+
 ### Project Overview
 **Collaborator:** Louis (art and sound projects partner)
-
+**Status:** `[BRAINSTORMING]` — Conceptual planning phase, technical requirements need refinement and resource gathering
 **Concept:** Interactive art installation exploring surveillance capitalism and data collection
 
-### Technical Requirements `[BRAINSTORMING]`
+### Network Infrastructure Requirements (Summary)
 
-**Core Functionality:**
-1. **Captive Portal WiFi VLAN**
-   - Users connect to dedicated VLAN WiFi SSID
-   - Captive portal landing page explaining data collection
-   - End User License Agreement (EULA) for data collection consent
-   - Legal compliance framework for data collection
+**Dedicated WiFi VLAN:**
+- Isolated lab VLAN for installation (no access to production network)
+- Captive portal for consent/EULA presentation
+- Sufficient bandwidth for data collection and real-time processing
 
-2. **Data Collection Architecture**
-   - WiFi/network metadata (signal strength, connection patterns)
-   - Browser fingerprinting (if legally permissible with consent)
-   - Social media integration (Instagram API, within ToS limits)
-   - Simulate data broker collection methods
-   - Pull legal data from any scrapable sources on people's devices that opt-in to the experience over WiFi
+**Security Considerations:**
+- Complete isolation from YelNet production network
+- No bridge to IoT, Cameras, or other VLANs
+- Consent-based data collection only
+- Immediate data deletion capability
 
-3. **Data Visualization Dashboard**
-   - Real-time display of collected data
-   - Demonstrate what "surveillance capitalism" captures
-   - Local display for participants to see their data
+**Hardware Planning:**
+- Dedicated access point or isolated SSID on existing AP
+- Network interface for data capture
+- Possibility of using retired **Archer AX6000** as dedicated installation router
 
-4. **Interactive Audio Component**
-   - WiFi/cellular signal → audio parameter mapping
-   - Presence detection triggering sound
-   - Synthesizer engine controlled by user data
-   - Spatial interaction based on device signals
-
-### Technical Stack Considerations
-- **Platform:** TBD (evaluating Linux/Windows options)
-- **Captive Portal Software:** TBD
-- **Data Processing:** TBD
-- **Audio Engine:** TBD (evaluating JUCE, Max/MSP, Pure Data)
-- **Visualization:** TBD (considering React/D3.js, TouchDesigner)
-
-### Open Questions
-- Legal framework for consent-based data collection in art context
-- How to clearly communicate "you are being surveilled" to participants
-- Technical feasibility of social media integration within platform ToS
-- Infrastructure requirements (dedicated router, VLAN setup, hardware)
-- Audio synthesis mapping strategies based on collected data
-- User experience flow from connection to data visualization and audio interaction
-- How to begin architecting the captive portal and data collection backend
-- How to anonymize data while still demonstrating surveillance concepts
-- Want to avoid PII collection entirely, focus on metadata and behavioral patterns like marketing and ad tech companies do
-
-**Status:** `[BRAINSTORMING]` — Conceptual planning phase, technical requirements need refinement and resource gathering
 
 ---
 
@@ -424,4 +398,15 @@ The following network details are **undocumented & not implemented:**
 - **Learning environment:** Homelab is for education, not just production functionality
 - **UniFi bias:** Dylan is operating a UniFi ecosystem, prefer UniFi-specific guidance when relevant
 - **Ask about unknowns:** Many network details (VLANs, IPs, firewall rules) are not yet defined—ask rather than assume
-- **Cross-references:** See CS context doc for data collection and audio synthesis learning goals (Louis project), IT context doc for DNS deep dive and PowerShell automation, Audio context doc for synthesis and TouchDesigner requirements
+- **Cross-references:** See `14-active-projects-context.md` for Louis art installation (Gar Studios) full project details, `11-it-sysadmin-context.md` for DNS deep dive and PowerShell automation, `12-audio-studio-context.md` for synthesis and TouchDesigner requirements
+
+---
+
+## Change Log
+
+**Format:** `YYYY-MM-DD HH:MM UTC - Description of changes`
+
+- 2026-01-31 18:32 UTC - Standardized date formats, cross-references, and status tags; added Status Tag Reference
+- *(Future changes will be logged here)*
+
+---

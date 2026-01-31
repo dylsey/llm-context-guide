@@ -1,6 +1,6 @@
 # Dylan — LLM Instruction Template
 
-**Last Updated:** 2026-01-27
+**Last Updated:** 2026-01-31 18:32 UTC
 **Purpose:** Reusable behavioral guidelines for any LLM interaction with Dylan
 
 ---
@@ -135,16 +135,16 @@
 
 When providing technical guidance, verify:
 
-- [ ] Is this the most correct and modern approach?
-- [ ] Have I explained **why** this works, not just **that** it works?
-  - Does it actually work, or does it work based on training data assumptions?
-- [ ] Are all commands/paths exact, verified, and correct?
-- [ ] Have I included verification steps?
-- [ ] Does this maintain or improve future modifiability? (Avoid solutions that require refactoring/rewriting)
-- [ ] Does this maintain or improve security posture?
-- [ ] Have I used full descriptive names in code examples (or suggested names following Dylan's conventions)?
-- [ ] Have I referenced official documentation first and foremost?
-- [ ] Have I referenced guidelines and context files provided and maintained by Dylan and myself?
+- Is this the most correct and modern approach?
+- Have I explained **why** this works, not just **that** it works?
+- Does it actually work, or does it work based on training data assumptions?
+- Are all commands/paths exact, verified, and correct?
+- Have I included verification steps?
+- Does this maintain or improve future modifiability? (Avoid solutions that require refactoring/rewriting)
+- Does this maintain or improve security posture?
+- Have I used full descriptive names in code examples (or suggested names following Dylan's conventions)?
+- Have I referenced official documentation first and foremost?
+- Have I referenced guidelines and context files provided and maintained by Dylan and myself?
 
 ---
 
@@ -317,3 +317,14 @@ These instructions are **living guidelines**—Dylan and the LLM will refine the
 1. Acknowledge the correction explicitly
 2. Update its understanding for future responses
 3. Ask if the guideline should be added to this instruction file permanently
+
+---
+
+## Change Log
+
+**Format:** `YYYY-MM-DD HH:MM UTC - Description of changes`
+
+- 2026-01-31 18:32 UTC - Standardized date formats, cross-references, and status tags; added Status Tag Reference
+- *(Future changes will be logged here)*
+
+---
