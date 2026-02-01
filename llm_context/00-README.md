@@ -116,19 +116,19 @@ You have an evolving number of **context markdown files** optimized for cloud-ho
 
 All context files use standardized status tags for consistency:
 
-| Tag | Meaning |
-| --- | ------- |
-| `[BRAINSTORMING]` | Conceptual only |
-| `[PLANNED]` | Scheduled/approved future work |
-| `[RESEARCH]` | Investigating/proof-of-concept |
-| `[ACTIVE]` | Currently working on this |
-| `[REFINEMENT]` | Improving/expanding |
-| `[ON_HOLD]` | Paused, may resume |
-| `[COMPLETE]` | Finished, may need maintenance |
-| `[DEPLOYED]` | In production use |
-| `[AVAILABLE]` | Ready for use but not deployed |
-| `[DEPRECATED]` | No longer relevant |
-| `[RETIRED]` | Replaced by newer solution |
+| Tag | Meaning | Use Case |
+|-----|---------|----------|
+| `[BRAINSTORMING]` | Conceptual only | Early ideation, no concrete plans |
+| `[PLANNED]` | Scheduled/approved future work | Budgeted projects, scheduled upgrades |
+| `[RESEARCH]` | Investigating/proof-of-concept | Learning phase, evaluating options |
+| `[ACTIVE]` | Currently working on this | Projects in progress, equipment in use |
+| `[REFINEMENT]` | Improving/expanding | Improvements & changes to existing items |
+| `[ON_HOLD]` | Paused, may resume | Waiting on dependencies, budget |
+| `[COMPLETE]` | Finished, may need maintenance | Deployed systems, finished projects |
+| `[DEPLOYED]` | In production use | Live systems, actively used resources |
+| `[AVAILABLE]` | Ready for use but not deployed | Spare equipment, unused resources |
+| `[DEPRECATED]` | No longer relevant | Retired equipment, abandoned projects |
+| `[RETIRED]` | Replaced by newer solution | Legacy systems kept for reference or repurpose |
 
 **Usage example:**
 ```markdown

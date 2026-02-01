@@ -46,11 +46,13 @@ Last Updated: YYYY-MM-DD HH:MM UTC
 **Tokens** are how LLMs measure and process text. Think of them as "words-ish"—a token is roughly 3-4 characters or 0.75 words in English.
 
 ### Why Tokens Matter:
+
 - **LLMs have token limits:** Most LLMs can only process 8,000-200,000 tokens per conversation
 - **Tokens cost money:** API-based LLMs charge per token (input + output)
 - **More tokens ≠ better results:** Loading irrelevant context wastes tokens and can confuse the LLM
 
 ### Token Examples:
+
 - "Hello" = 1 token
 - "playground" = 1 token
 - "I'm using the modular context system" = ~7 tokens
@@ -118,19 +120,19 @@ All context files use standardized status tags for consistency:
    - When updating or creating new context files, always use these tags to indicate the status of projects, skills, or tools.
    - Change these tags to suit your own thinking patterns and workflow needs.
 
-| Tag | Meaning |
-| --- | ------- |
-| `[BRAINSTORMING]` | Conceptual only |
-| `[PLANNED]` | Scheduled/approved future work |
-| `[RESEARCH]` | Investigating/proof-of-concept |
-| `[ACTIVE]` | Currently working on this |
-| `[REFINEMENT]` | Improving/expanding |
-| `[ON_HOLD]` | Paused, may resume |
-| `[COMPLETE]` | Finished, may need maintenance |
-| `[DEPLOYED]` | In production use |
-| `[AVAILABLE]` | Ready for use but not deployed |
-| `[DEPRECATED]` | No longer relevant |
-| `[RETIRED]` | Replaced by newer solution |
+| Tag | Meaning | Use Case |
+|-----|---------|----------|
+| `[BRAINSTORMING]` | Conceptual only | Early ideation, no concrete plans |
+| `[PLANNED]` | Scheduled/approved future work | Budgeted projects, scheduled upgrades |
+| `[RESEARCH]` | Investigating/proof-of-concept | Learning phase, evaluating options |
+| `[ACTIVE]` | Currently working on this | Projects in progress, equipment in use |
+| `[REFINEMENT]` | Improving/expanding | Improvements & changes to existing items |
+| `[ON_HOLD]` | Paused, may resume | Waiting on dependencies, budget |
+| `[COMPLETE]` | Finished, may need maintenance | Deployed systems, finished projects |
+| `[DEPLOYED]` | In production use | Live systems, actively used resources |
+| `[AVAILABLE]` | Ready for use but not deployed | Spare equipment, unused resources |
+| `[DEPRECATED]` | No longer relevant | Retired equipment, abandoned projects |
+| `[RETIRED]` | Replaced by newer solution | Legacy systems kept for reference or repurpose |
 
 
 **Usage example:**
@@ -146,6 +148,7 @@ All context files use standardized status tags for consistency:
 **Not sure which context files you need?** Answer these questions to identify your domains:
 
 ### Question 1: What do you do for work?
+
 - **Software developer?** → Create `10-cs-engineering-competency.md`
 - **IT/sysadmin?** → Create `11-it-sysadmin-context.md`
 - **Designer/creative?** → Create `12-creative-workflow-context.md`
@@ -154,6 +157,7 @@ All context files use standardized status tags for consistency:
 **Example:** "I'm a teacher" → Create `11-teaching-context.md` (subjects taught, grade levels, classroom tech, curriculum goals)
 
 ### Question 2: What hobbies/creative pursuits do you have?
+
 - **Music production?** → Create `12-audio-studio-context.md`
 - **Photography?** → Create `13-photography-context.md`
 - **Cooking?** → Create `14-cooking-recipes-context.md`
@@ -162,6 +166,7 @@ All context files use standardized status tags for consistency:
 **Example:** "I build mechanical keyboards" → Create `15-keyboard-building-context.md` (switches, PCBs, soldering equipment, projects)
 
 ### Question 3: What technical systems do you manage?
+
 - **Home network?** → Create `13-home-network-context.md`
 - **Smart home?** → Create `14-home-automation-context.md`
 - **Home lab?** → Create `15-homelab-context.md`
@@ -170,6 +175,7 @@ All context files use standardized status tags for consistency:
 **Example:** "I run a Plex media server" → Create `16-media-server-context.md` (hardware specs, storage, library organization, remote access)
 
 ### Question 4: What are you actively learning?
+
 - **New programming language?** → Add to `10-cs-engineering-competency.md` under "Target Skills"
 - **Cybersecurity?** → Create `17-cybersecurity-learning-context.md`
 - **Foreign language?** → Create `18-language-learning-context.md`
@@ -177,6 +183,7 @@ All context files use standardized status tags for consistency:
 **Example:** "Learning Japanese" → Create `18-japanese-learning-context.md` (textbooks, apps, study schedule, conversation partners)
 
 ### Minimum Recommended Files (Everyone Needs These):
+
 1. **01-quick-reference.md** - Your identity snapshot
 2. **02-llm-instructions.md** - How LLMs should interact with you
 3. **20-miscellaneous-context.md** - Catch-all for preferences
@@ -500,11 +507,11 @@ Consider setting a **calendar reminder** on the last Friday of each month:
 
 **Monthly review checklist:**
 ```
-[ ] 14-active-projects-context.md - Move completed projects, add new ones
-[ ] 10-cs-engineering-competency.md - Update skills from "Target" → "Developing" → "Proven"
-[ ] 20-miscellaneous-context.md - Update tool preferences, add new frustrations/learnings
-[ ] 01-quick-reference.md - Update active projects list to match priorities
-[ ] All files - Fill in UNKNOWN sections as you document things
+- 14-active-projects-context.md - Move completed projects, add new ones
+- 10-cs-engineering-competency.md - Update skills from "Target" → "Developing" → "Proven"
+- 20-miscellaneous-context.md - Update tool preferences, add new frustrations/learnings
+- 01-quick-reference.md - Update active projects list to match priorities
+- All files - Fill in UNKNOWN sections as you document things
 ```
 
 **Automated reminder options:**
