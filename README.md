@@ -15,7 +15,7 @@ I probably made a mistake by using Claude and GPT to teach me along side their o
 This was most-definitely written with the help of `Claude` and a little bit of `GPT-5.2`.
 
 Sorry, but I didn't start this stuff during the age of learn-this-shit-on-your-own.
-I think that I wish I did, but my cardboard box does not say time machine. 
+I think that I wish I did, but my cardboard box does not say time machine.
 
 Please help me #gitgood by collaborating or contributing.
-Hell, tell me there's a better way, if that's all you want to do.
+Hell, tell me there's a better way, if that's all you want to do.  
