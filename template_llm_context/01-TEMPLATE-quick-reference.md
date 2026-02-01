@@ -1,6 +1,6 @@
 # Dylan — Quick Reference
 
-**Last Updated:** 2026-01-31 18:32 UTC
+**Last Updated:** 2026-02-01 15:22 UTC
 **Purpose:** Instant context for new LLM conversations
 
 ---
@@ -31,19 +31,19 @@ Dylan — Computer Support Analyst at the State of Arkansas Public Defender Comm
 
 All context files use standardized status tags for consistency:
 
-| Tag | Meaning |
-| --- | ------- |
-| `[BRAINSTORMING]` | Conceptual only |
-| `[PLANNED]` | Scheduled/approved future work |
-| `[RESEARCH]` | Investigating/proof-of-concept |
-| `[ACTIVE]` | Currently working on this |
-| `[REFINEMENT]` | Improving/expanding |
-| `[ON_HOLD]` | Paused, may resume |
-| `[COMPLETE]` | Finished, may need maintenance |
-| `[DEPLOYED]` | In production use |
-| `[AVAILABLE]` | Ready for use but not deployed |
-| `[DEPRECATED]` | No longer relevant |
-| `[RETIRED]` | Replaced by newer solution |
+| Tag | Meaning | Use Case |
+|-----|---------|----------|
+`[BRAINSTORMING]` - Conceptual only
+`[PLANNED]` - Scheduled/approved future work
+`[RESEARCH]` - Investigating/proof-of-concept
+`[ACTIVE]` - Currently working on this
+`[REFINEMENT]` - Improving/expanding
+`[ON_HOLD]` - Paused, may resume
+`[COMPLETE]` - Finished, may need maintenance
+`[DEPLOYED]` - In production use
+`[AVAILABLE]` - Ready for use but not deployed
+`[DEPRECATED]` - No longer relevant
+`[RETIRED]` - Replaced by newer solution
 
 ## Active Projects (Priority Order)
 

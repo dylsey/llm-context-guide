@@ -1,4 +1,4 @@
-# [YOUR_NAME] — [Domain Name] Context
+# <YOUR_NAME> — [Domain Name] Context
 
 **Last Updated:** YYYY-MM-DD HH:MM UTC
 **Purpose:** [Brief description of what this domain covers]
@@ -25,7 +25,7 @@ INSTRUCTIONS FOR USING THIS TEMPLATE:
 - [Main topic area 3]
 
 **Related Domains:**
-- See `10-engineering-competency.md` for [if applicable]
+- See `10-knowledgearea-competency.md` for [if applicable]
 - See `11-work-domain-context.md` for [if applicable]
 - See `12-creative-domain-context.md` for [if applicable]
 - See `13-home-network-context.md` for [if applicable]

@@ -1,6 +1,6 @@
 # How to Use the Modular LLM Context System
 
-Last Updated: 2026-01-31 18:32 UTC
+Last Updated: YYYY-MM-DD HH:MM UTC
 
 **Purpose:** This guide explains how to use personalized markdown context files with any LLM (Claude, ChatGPT, or self-hosted models).
 
@@ -66,19 +66,19 @@ You have an evolving number of **context markdown files** optimized for cloud-ho
 
 ### Core Context Files (Domain-Specific)
 
-1. **10-cs-engineering-competency.md** (~1,700 tokens) - Programming skills, language proficiency, learning gaps, project history
-2. **11-it-sysadmin-context.md** (~2,200 tokens) - IT role, Git repository work, PowerShell automation, enterprise practices
-3. **12-audio-studio-context.md** (~2,700 tokens) - Complete studio inventory, QU-5D routing template, DAW workflows
-4. **13-home-network-context.md** (~3,100 tokens) - YelNet topology, UniFi migration, homelab goals, security cameras
-5. **14-active-projects-context.md** (~4,100 tokens) - Current projects across work, creative, and learning domains
+1. **10-skill-domain-context.md**  (token count) - This file will define a skill or knowledge area you actively need to use and reference, e.g., programming, design, writing
+2. **11-work-domain-context.md** (token count) - This context file will define your professional role, environment, tools, and workflows
+3. **12-creative-domain-context.md** (token count) - This file will define your creative pursuits, tools, workflows, and projects
+4. **13-specific-focus-domain-context.md** (token count) - This file will define a secondary domain that will not fit neatly into work or creative categories, e.g., home network, smart home, 3D printing, specific hobby or learning focus. It can be used as a primary context file or a secondary reference file.
+5. **14-active-projects-context.md** (token count) - Current projects across work, creative, and learning domains
 
 ### Supporting Files
 
-6. **20-miscellaneous-context.md** (~3,100 tokens) - Catch-all for preferences, tools, habits, anti-patterns
-7. **02-llm-instructions.md** (~2,500 tokens) - Behavioral guidelines for how LLMs should interact with you
-8. **01-quick-reference.md** (~950 tokens) - ~300-word snapshot for instant context in new conversations
+6. **20-miscellaneous-context.md** (token count) - Catch-all for preferences, tools, habits, anti-patterns
+7. **02-llm-instructions.md** (token count) - Behavioral guidelines for how LLMs should interact with you
+8. **01-quick-reference.md** (token count) - ~300-word snapshot for instant context in new conversations
 
-**Total system size:** ~20,350 tokens (well within most LLM context windows)
+**Total system size:** (total token count) this will help you estimate how much context you can load into various LLMs.
 
 ### For Self-Hosted LLMs & MCPs (Model Context Protocol)
 
@@ -115,6 +115,8 @@ You have an evolving number of **context markdown files** optimized for cloud-ho
 ## Status Tag Reference
 
 All context files use standardized status tags for consistency:
+   - When updating or creating new context files, always use these tags to indicate the status of projects, skills, or tools.
+   - Change these tags to suit your own thinking patterns and workflow needs.
 
 | Tag | Meaning |
 | --- | ------- |
@@ -130,10 +132,11 @@ All context files use standardized status tags for consistency:
 | `[DEPRECATED]` | No longer relevant |
 | `[RETIRED]` | Replaced by newer solution |
 
+
 **Usage example:**
 ```markdown
-| **Allen & Heath QU-5D** | `[DEPLOYED]` | 48 kHz | Main digital mixer |
-| **Zoom LiveTrak L-12** | `[AVAILABLE]` | 48 kHz | Replaced by QU-5D |
+| **Current Digital Mixer** | `[DEPLOYED]` |
+| **Previous Digital Mixer** | `[AVAILABLE]` |
 ```
 
 ---
@@ -224,7 +227,7 @@ I'm ready to discuss [your topic] when you've processed this context.
 [paste 01-quick-reference.md]
 [paste 13-home-network-context.md]
 
-"My WiFi is slow on the Archer AX6000 downstairs. Here's what I've tried so far..."
+"My WiFi is slow on the Router downstairs. Here's what I've tried so far..."
 ```
 
 ---
@@ -259,20 +262,20 @@ Let's continue—can you refactor that last code snippet using full descriptive 
 
 ### Example 1: Music Production Question
 
-**Your Question:** "How should I route my Prophet 10 synth through the QU-5D for recording in Ableton?"
+**Your Question:** "How should I route my Prophet 10 synth through the Mixer for recording in Ableton?"
 
 **Files to Load:**
 1. `01-quick-reference.md` (establishes identity)
-2. `12-audio-studio-context.md` (has QU-5D routing template and Prophet 10 details)
+2. `12-audio-studio-context.md` (has Mixer routing template and Prophet 10 details)
 
 **Step-by-step:**
 ```
 1. Open new ChatGPT/Claude conversation
 2. Copy/paste 01-quick-reference.md
-3. Wait 5 seconds
+3. Wait 5 seconds for processing and response
 4. Copy/paste 12-audio-studio-context.md
 5. Type your question:
-   "How should I route my Prophet 10 through the QU-5D for recording in Ableton?
+   "How should I route my Prophet 10 through the Mixer for recording in Ableton?
    I want to hear it through my monitors while recording, and I need clean
    direct monitoring without latency."
 6. Review LLM's answer
@@ -341,7 +344,7 @@ Let's continue—can you refactor that last code snippet using full descriptive 
 
    What are the tradeoffs?"
 5. LLM knows:
-   - You already understand factory patterns (BulletFactory in Contra project)
+   - You already understand factory patterns (BulletFactory in previous project outlined in context file)
    - You care about ownership semantics and lifecycle management
    - You prefer readability over cleverness
    - You want full descriptive names
@@ -441,10 +444,10 @@ Claude: "Added to memory: User uses Pro Tools 2025.12"
 2. Point MCP to your context directory:
    {
      "command": "mcp-server-filesystem",
-     "args": ["--directory", "C:\\Dev\\docs\\llm-context"]
+     "args": ["--directory", "C:\\Path\\todocs\\llm-context"]
    }
 3. LLM can now access files via tool calls
-4. Ask: "Read my 12-audio-studio-context and help me with QU-5D routing"
+4. Ask: "Read my 12-audio-studio-context.md and help me with Mixer routing"
 5. LLM calls MCP tool to fetch file, then answers
 ```
 
@@ -458,10 +461,10 @@ Claude: "Added to memory: User uses Pro Tools 2025.12"
 
 **Example 1: Hardware change**
 ```
-You bought: Novation Peak Desktop synth
+You bought: New Synth
 Action: Update 12-audio-studio-context.md
 Section: "5) Hardware Synthesizers & Sound Sources"
-Add row: | Novation Peak Desktop | Hybrid analog | Multi-timbral, rich modulation |
+Add row: | New Synth | Synth Type | Key Features |
 ```
 
 **Example 2: Project status change**
@@ -477,7 +480,7 @@ Add completion date and lessons learned
 You got promoted: Senior Systems Engineer
 Action: Update 11-it-sysadmin-context.md
 Section: "1) Professional Role & Environment"
-Change title: "Senior Systems Engineer" (was "Computer Support Analyst")
+Change title: "Senior Systems Engineer" (was "Support Analyst")
 Update responsibilities to reflect new role
 ```
 
@@ -544,19 +547,19 @@ done
 **Scenario:** You just bought a Lenovo ThinkPad E14 laptop for personal use.
 
 ```
-1. Open VS Code: C:\Dev\docs\llm-context\20-miscellaneous-context.md
+1. Open VS Code: C:\Path\todocs\llm-context\20-miscellaneous-context.md
 
 2. Find section: "5) Hardware & Physical Environment → Portable Computing"
 
 3. Add new line:
    **Before:**
    - **Workbox:** Dell i7 vPro 7780 (work laptop, Windows 11 Pro)
-   - **Surface Book Gen 1:** AlmaLinux 9.6 bare metal (Linux learning platform)
+   - **Secondary Computer:** RHEL bare metal (Linux learning platform)
 
    **After:**
    - **Workbox:** Dell i7 vPro 7780 (work laptop, Windows 11 Pro)
-   - **Singularity:** Lenovo ThinkPad E14 (personal/creative laptop, Windows 11 Home)
-   - **Surface Book Gen 1:** AlmaLinux 9.6 bare metal (Linux learning platform)
+   - **ComputerName:** Computer Type (personal/creative laptop, Windows 11 Home)
+   - **Secondary Computer:** RHEL bare metal (Linux learning platform)
 
 4. Update "Last Updated" date at top of file:
    **Last Updated:** 2026-01-28  (was 2026-01-27)
@@ -564,9 +567,9 @@ done
 5. Save file (Ctrl+S)
 
 6. Commit to Git:
-   cd C:\Dev\docs\llm-context
+   cd C:\Path\todocs\llm-context
    git add 20-miscellaneous-context.md
-   git commit -m "Added Singularity laptop to hardware inventory"
+   git commit -m "Added ComputerName laptop to hardware inventory"
    git push
 
 7. Test with LLM:
@@ -593,7 +596,7 @@ done
 
 ```bash
 # Create experimental branch
-cd C:\Dev\docs\llm-context
+cd C:\Path\todocs\llm-context
 git checkout -b reorganize-audio-context
 
 # Make changes to 12-audio-studio-context.md
@@ -626,34 +629,34 @@ This structure uses **numeric prefixes** for alphanumeric sorting that works con
 - Text editors (VS Code, Vim)
 
 ```
-C:\Dev\docs\llm-context\
+C:\Path\todocs\llm-context\
 │
 ├── 00-README.md                         ← START HERE (this guide)
 │
-├── 📂 QUICK START FILES (01-0x)         ← Load these first
+├── QUICK_START_FILES (01-0x)         ← Load these first
 │   ├── 01-quick-reference.md            ← Your identity snapshot
 │   └── 02-llm-instructions.md           ← How LLM should behave
 │
-├── 📂 DOMAIN CONTEXT FILES (10-1x)      ← Load as needed per topic
+├── DOMAIN_CONTEXT_FILES (10-1x)      ← Load as needed per topic
 │   ├── 10-cs-engineering-competency.md  ← Programming, languages, projects
 │   ├── 11-it-sysadmin-context.md        ← IT work, servers, automation
 │   ├── 12-audio-studio-context.md       ← Music production, equipment, workflows
 │   ├── 13-home-network-context.md       ← Network topology, homelab, security
 │   └── 14-active-projects-context.md    ← Current work across all domains
 │
-├── 📂 SUPPORTING FILES (20-2x)          ← Catch-all and utilities
+├── SUPPORTING_FILES (20-2x)          ← Catch-all and utilities
 │   └── 20-miscellaneous-context.md      ← Preferences, tools, catch-all
 │
-├── 📁 templates/                        ← (Optional) Reusable templates
+├── templates/                        ← (Optional) Reusable templates
 │   ├── new-domain-template.md
 │   ├── project-documentation-template.md
 │   └── troubleshooting-log-template.md
 │
-├── 📁 archive/                          ← (Optional) Old versions
+├── archive/                          ← (Optional) Old versions
 │   ├── 2025-01-01_12-audio-studio-context.md
 │   └── 2024-12-15_14-active-projects-context.md
 │
-└── 📝 CHANGELOG.md                      ← (Optional) Track major updates
+└── CHANGELOG.md                      ← (Optional) Track major updates
 ```
 
 **Why this numbering scheme works:**
@@ -812,7 +815,7 @@ LLM responds with generic advice...
 **Option 1: Paste only relevant sections**
 ```
 Instead of pasting entire 12-audio-studio-context.md, paste just:
-- Section 4 (QU-5D routing)
+- Section 4 (Mixer routing)
 - Section 5 (Hardware synths)
 ```
 
@@ -921,7 +924,7 @@ git push
 12-audio-studio-context.md (2,500 words)
 - DAW workflows
 - Hardware synth inventory
-- QU-5D routing template
+- Mixer routing template
 - MIDI infrastructure
 - Active music projects
 ```
@@ -938,7 +941,7 @@ cp templates/new-domain-template.md 12c-audio-projects-context.md
 
 # Result:
 12a-audio-hardware-context.md (800 words) - Hardware synths, MIDI, monitoring
-12b-audio-workflows-context.md (900 words) - DAW workflows, QU-5D routing
+12b-audio-workflows-context.md (900 words) - DAW workflows, Mixer routing
 12c-audio-projects-context.md (600 words) - Active music projects, goals
 ```
 
@@ -989,7 +992,8 @@ git push -u origin main
 
 ## Summary
 
-This modular system gives you **precise control** over what context each LLM has access to, while keeping maintenance simple. By updating only the files that change, you avoid the "big monolithic document" problem that becomes outdated and unwieldy.
+This modular system gives you control over what context each LLM has access to, while keeping maintenance simple.
+By updating only the files that change, you avoid the "big monolithic document" problem that becomes outdated and unwieldy.
 
 ### Key Principles:
 1. **Load minimum context needed** per conversation (saves tokens, improves focus)
@@ -1035,7 +1039,9 @@ find . -mtime -30       # Files modified recently
 
 **Questions? Contributions?**
 
-This system is designed to evolve. If you discover better practices or have suggestions, document them in your own `README-improvements.md` and share with the community!
+This system is designed to evolve. If you discover better practices or have suggestions, document them in your own `README-improvements.md` and share then with people.
+Don't be a **Smaug**
+
 
 ---
 
@@ -1044,6 +1050,7 @@ This system is designed to evolve. If you discover better practices or have sugg
 **Format:** `YYYY-MM-DD HH:MM UTC - Description of changes`
 
 - 2026-01-31 18:32 UTC - Standardized date formats, cross-references, and status tags; added Status Tag Reference
+- 2026-02-01 15:45 UTC - Improved document for public sharing.
 - *(Future changes will be logged here)*
 
 ---
