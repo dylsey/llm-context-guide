@@ -38,7 +38,7 @@ All context files use standardized status tags for consistency:
 | `[RESEARCH]` | Investigating/proof-of-concept | Learning phase, evaluating options |
 | `[ACTIVE]` | Currently working on this | Projects in progress, equipment in use |
 | `[REFINEMENT]` | Improving/expanding | Improvements & changes to existing items |
-| `[ON_HOLD]` | Paused, may resume | Waiting on dependencies, budget |
+| `[PAUSED]` | Paused, may resume | Waiting on dependencies, budget |
 | `[COMPLETE]` | Finished, may need maintenance | Deployed systems, finished projects |
 | `[DEPLOYED]` | In production use | Live systems, actively used resources |
 | `[AVAILABLE]` | Ready for use but not deployed | Spare equipment, unused resources |
