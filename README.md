@@ -19,3 +19,14 @@ I think that I wish I did, but my cardboard box does not say time machine.
 
 Please help me #gitgood by collaborating or contributing.
 Hell, tell me there's a better way, if that's all you want to do.  
+
+## What this is now
+
+It started as files you paste into a chat. It's now a system Claude Code loads on its own: two private Git repos (context and skills), a 2-line `~/.claude/CLAUDE.md` on each machine that imports the context live, skills linked in from their own repo, and PowerShell hooks that pull, link, and lint every session. The same files still work pasted into any other LLM. The original paste-based version is preserved at tag `v1-paste-workflow`.
+
+## Start here
+
+1. [template-context/00-TEMPLATE-README.md](template-context/00-TEMPLATE-README.md): how it works and the setup order.
+2. [template-context/](template-context/): templates for the core rules, global `CLAUDE.md`, domain files, and the machine onboarding playbook.
+3. [skills-template/](skills-template/): skill conventions, a guardrail skill the hooks rely on, and an example lens skill.
+4. [hooks/](hooks/): the SessionStart, SessionEnd, and lint hooks, with the lint hook's regression tests.
