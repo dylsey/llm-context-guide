@@ -97,7 +97,7 @@ Verify: start a new session and ask "which machine is this?". Claude answers fro
 #### Notes on tiers
 
 - `00-core-rules.md` holds one line per rule plus a map of which domain file covers which topic. Detail goes in a skill or domain file. Every line in core is paid for in every session.
-- Domain files hold facts (gear, environments, projects). Skills hold procedures (how to troubleshoot, how to edit context, how to teach you).
+- Domain files hold facts (gear, environments, projects). Skills hold procedures (how to edit and maintain your context).
 - A rule repeated in two places will drift. One file owns each fact; others point to it.
 
 ---
@@ -109,7 +109,7 @@ A separate private repo, one folder per skill, each with a `SKILL.md` (YAML head
 Conventions (full text in `../skills-template/README.md`):
 
 - **Two kinds of skill.**
-  - Guardrail or procedure: loads automatically when its `description` matches the request, because its value is running without being asked (troubleshooting method, context editing rules).
+  - Guardrail or procedure: loads automatically when its `description` matches the request, because its value is running without being asked (for example, `context-maintenance` before any edit to your context).
   - Lens: a point of view you apply on purpose and compare against normal output. Header has `disable-model-invocation: true`, so it loads only through `/<SKILL>`.
 - **Usage and `-help`:** every `SKILL.md` has a `## Usage` section right after the title: a synopsis, three to five examples, and `/<SKILL> -help`, which prints that section and stops. `argument-hint` repeats the synopsis for autocomplete.
 - **Adapted third-party skills:** copy only the files the skill uses, standardize the header, add one attribution line under the title (owner/repo, license, copyright, commit). No nested clones, plugins, or hooks from the source.
